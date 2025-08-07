@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anurag Mandan - BTech AI</title>
+  <style>
+    body {
+      margin: 8px;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 987px; /* 610 + 377 (Fibonacci) */
+      margin: auto;
+      padding: 13px; /* Fibonacci */
+      border: 3px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 5px 13px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 34px; /* Fibonacci: 34 */
+      margin-bottom: 13px;
+      color: #2c3e50;
+    }
+
+    .photo {
+      width: 377px; /* Fibonacci */
+      height: 233px; /* Fibonacci: ratio adjusted */
+      border-radius: 8px;
+      object-fit: cover;
+      box-shadow: 0 5px 8px rgba(0,0,0,0.2);
+      margin-bottom: 13px;
+    }
+
+    p {
+      font-size: 21px; /* Fibonacci */
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
+    .footer {
+      margin-top: 21px;
+      font-size: 13px; /* Fibonacci */
+      text-align: center;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Anurag Mandan</h1>
+    <p><strong>Roll No:</strong> E23CSEU1321</p>
+    <p><strong>Program:</strong> 3rd Year, B.Tech in Artificial Intelligence</p>
+
+    <img class="photo" id="randomPhoto" alt="Scenery Image" />
+
+
+    <div class="footer">This page refreshes with a new photo every time — powered by Fibonacci aesthetics 🌀</div>
+  </div>
+
+  <script>
+    // Array of food + nature photo URLs
+    const photos = [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb", // mountains
+      "https://images.unsplash.com/photo-1470770841072-f978cf4d019e", // forest
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee", // lake
+    ];
+
+    const randomIndex = Math.floor(Math.random() * photos.length);
+    document.getElementById("randomPhoto").src = photos[randomIndex] + "?auto=compress&cs=tinysrgb&h=233&w=377";
+  </script>
+
+</body>
+</html>
